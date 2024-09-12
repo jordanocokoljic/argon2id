@@ -1,5 +1,5 @@
 // Package argon2id provides utility functions for generating and verifying
-// hashes generated using the Argon2 key derivation function.
+// hashes using the Argon2 key derivation function.
 package argon2id
 
 import (
@@ -87,7 +87,7 @@ func UseParameters(
 
 // OWASPParameters will return a new [Parameters] instance that adheres to the
 // OWASP suggestions[1] as of 2024/09/13. Because OWASP doesn't provide values
-// for the salt and key length, these have been set at 128 and 256 bit
+// for the salt and key length, these have been set at 128 and 256 bits
 // respectively.
 //
 // [1]: https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html
