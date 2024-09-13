@@ -85,13 +85,13 @@ func UseParameters(
 	}
 }
 
-// OWASPParameters will return a new [Parameters] instance that adheres to the
-// OWASP suggestions[1] as of 2024/09/13. Because OWASP doesn't provide values
-// for the salt and key length, these have been set at 128 and 256 bits
-// respectively.
+// OWASPMinimumParameters will return a new [Parameters] instance that adheres
+// to the OWASP suggestions[1] for the minimum parameters as of 2024/09/13.
+// Because OWASP doesn't provide values for the salt and key length, these have
+// been set at 128 and 256 bits respectively.
 //
 // [1]: https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html
-func OWASPParameters() Parameters {
+func OWASPMinimumParameters() Parameters {
 	return Parameters{
 		iterations:  2,
 		memory:      19 * MiB,

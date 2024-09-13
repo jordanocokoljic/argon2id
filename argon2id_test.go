@@ -67,7 +67,7 @@ func TestUseParameters(t *testing.T) {
 }
 
 func TestGenerateFromPassword(t *testing.T) {
-	parameters := argon2id.OWASPParameters()
+	parameters := argon2id.OWASPMinimumParameters()
 	plain := []byte("my secure password")
 
 	t.Run("GeneratesUniqueHashes", func(t *testing.T) {
@@ -186,7 +186,7 @@ func TestCompareHashAndPassword(t *testing.T) {
 func TestInteropability(t *testing.T) {
 	plain := []byte("my secure password")
 
-	hash, err := argon2id.GenerateFromPassword(plain, argon2id.OWASPParameters())
+	hash, err := argon2id.GenerateFromPassword(plain, argon2id.OWASPMinimumParameters())
 	if err != nil {
 		t.Fatalf("error occurred generating hash: %s", err)
 	}
